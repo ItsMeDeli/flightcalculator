@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Ceny Lotu</title>
+    <link rel="icon" type="image/png" href="/images/icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="video-background">
+    <iframe
+            src="https://www.youtube.com/embed/PfUSqrUzBuU?autoplay=1&mute=1&loop=1&start=8&end=151&playlist=PfUSqrUzBuU"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+    </iframe>
+</div>
+<div class="container">
+    <h1>Kalkulator Ceny Lotu</h1>
+    <form id="flightForm">
+        <label for="passengers">Liczba osób:</label>
+        <input type="number" id="passengers" min="1" placeholder="Wprowadź liczbę osób" required>
+
+        <label for="tripType">Typ lotu:</label>
+        <select id="tripType">
+            <option value="oneWay">W jedną stronę</option>
+            <option value="roundTrip">W dwie strony</option>
+        </select>
+
+        <button type="button" id="calculateButton">Oblicz</button>
+    </form>
+    <div class="results">
+        <h2>Wyniki:</h2>
+        <p id="totalCost">Całkowity koszt: -</p>
+        <p id="costPerPerson">Koszt na osobę: -</p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
