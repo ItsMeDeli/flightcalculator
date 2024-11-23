@@ -1,17 +1,15 @@
 document.getElementById("calculateButton").addEventListener("click", function() {
-    const passengers = parseInt(document.getElementById("passengers").value);
-    const tripType = document.getElementById("tripType").value;
+    const passengers = parseInt(document.getElementById("passengers").value);  // Liczba osób
+    const tripType = document.getElementById("tripType").value;  // Typ lotu
 
     if (!passengers || passengers <= 0) {
         alert("Wprowadź poprawną liczbę osób.");
         return;
     }
 
-    const planeCost = 105000;
-    const peoplePerPlane = 14;
-    const numPlanes = Math.ceil(passengers / peoplePerPlane);
+    const ticketPrice = 7500;  // Cena biletu na osobę w dolarach
+    let totalCost = passengers * ticketPrice;  // Całkowity koszt
 
-    let totalCost = numPlanes * planeCost;
     if (tripType === "roundTrip") {
         totalCost *= 2;
     }
